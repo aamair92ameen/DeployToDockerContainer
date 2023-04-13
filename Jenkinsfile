@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo "Building the application..."'
-                bat 'cp index.html build/'
+                bat 'copy index.html build/'
             }
         }
         stage('Deploy') {
