@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'echo "Deploying the application..."'
-                bat 'docker run -d -p 80:80 -v %cd%\\build:C:\\nginx\\html nginx'
+                bat 'docker run -d -p 80:80 -v %cd%/build:/usr/share/nginx/html nginx'
             }
         }
     }
