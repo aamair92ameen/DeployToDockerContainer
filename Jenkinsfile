@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo "Building the application..."'
+                bat 'if not exist build (mkdir build)'
                 bat 'copy index.html build\\'
             }
         }
